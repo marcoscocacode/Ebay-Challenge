@@ -43,8 +43,6 @@ function addItem ({}: Props) {
       const receipt = tx.receipt // O recibo da transação
       const tokenId = tx.id // O id do NFT Minted
       const nft = await tx.data() // (Opcional) Guarda os detalhes do Minted NFT
-
-      console.log(receipt, tokenId, nft)
       router.push("/")
     } catch (error) {
       console.error(error)
