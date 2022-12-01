@@ -7,7 +7,7 @@ import {
 import { ListingType } from "@thirdweb-dev/sdk"
 import Header from "../components/Header"
 import Link from "next/link"
-import { useRouter } from "next/router"
+import Router, { useRouter } from "next/router"
 
 const Home = () => {
   const router = useRouter()
@@ -28,8 +28,8 @@ const Home = () => {
             {listings?.map(listings => (
               <div
                 key={listings.id}
-                onClick={() => router.push(`/listing/${listings.id}`)}
-                className="flex flex-col card hover:scale-105 transition-all duration-150 ease-out" 
+                onClick={() => router.push(`/listings/${listings.id}`)}
+                className="flex flex-col card hover:scale-105 transition-all duration-150 ease-out"
               >
                 <div className="flex-1 flex flex-col pb-2 items-center" >
                   < MediaRenderer 
